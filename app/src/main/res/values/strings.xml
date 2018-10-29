@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Moviepedia</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="version">Version</string>
+    <string name="versionNumber">v1.0</string>
+    <string name="languange">Languange</string>
+
+    <string name="detail">Detail</string>
+
+</resources>

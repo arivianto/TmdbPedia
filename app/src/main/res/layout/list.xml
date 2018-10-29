@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Title"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/txtTitle"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:text="Description"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:textSize="10sp"
+        android:id="@+id/txtDesc"
+        android:layout_below="@+id/txtTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/txtTitle"
+        android:layout_alignStart="@+id/txtTitle"
+        android:paddingBottom="5dp"/>
+
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/detail"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/txtDesc"
+        android:layout_alignLeft="@+id/txtDesc"
+        android:layout_alignStart="@+id/txtDesc"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
