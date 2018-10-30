@@ -56,18 +56,17 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         listview = (ListView) findViewById(R.id.listview);
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-               Toast.makeText(MainActivity.this," "+position, Toast.LENGTH_SHORT).show();
-
-
-            }
-        });
+        listview.setOnItemClickListener(this);
 
         new CheckConnectionStatus().execute("https://api.themoviedb.org/3/movie/now_playing?api_key=5358db34ed40642b560bc2f997adf49a");
     }
+	
+	@override
+	public void onItemClick(AdapterView<?> parent, View view,int position,long id){
+		Intent intent= new Intent(MainActivity.this,Movie_detail.class);
+		intent.putExtra("MovieDetails",(Movies)parent.getItemAtPosition(position));
+		startActivity(intent);
+	}
 
     @Override
     public void onBackPressed() {
